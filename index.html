@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Rohit Balekundri Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+
+		#publications-section {
+			.publications-label a:hover {
+				color: #b2904b;
+
+			}
+
+		}
+
+		a{
+			cursor: pointer;
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index.html">Rohit Balekundri</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+					<li class="nav-item"><a href="#publications-section" class="nav-link"><span>Publications</span></a>
+					</li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png); margin-top: 100px;;">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Welcome!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Rohit Balekundri</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Engineer  ',
+										'IoT Enthusiast  ',
+										'',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>An IoT and Network Engineer</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 2 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<a href="https://drive.google.com/file/d/1QMiUyquBN3EU0bl6ovvUMMob3zIpkyna/view?usp=drive_link"
+										target="_blank" class="btn btn-white btn-outline-white py-3 px-4">Download
+										CV</a>
+									<a href="https://www.linkedin.com/in/rohitbalekundri/"
+										class="btn btn-primary py-3 px-3" target="_blank">LinkedIn</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="">
+							<div class="">
+									<p class="title-s">Skills</p>
+									<p class="d-flex justify-content-between">
+										<span>Embedded Systems Development</span>
+										<span class="pull-right">85%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%"
+											aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p class="d-flex justify-content-between">
+										<span>C++</span> <span class="pull-right">95%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p class="d-flex justify-content-between">
+										<span>Hardware Description Languages (HDL)</span> <span
+											class="pull-right">80%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p class="d-flex justify-content-between">
+										<span>Network Security</span> <span class="pull-right">95%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p class="d-flex justify-content-between">
+										<span>PYTHON</span> <span class="pull-right">80%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p class="d-flex justify-content-between">
+										<span>IoT Technologies: </span> <span class="pull-right">95%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<p class="d-flex justify-content-between">
+										<span>Cloud Computing</span> <span class="pull-right">85%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<p class="d-flex justify-content-between">
+										<span>Machine Learning</span> <span class="pull-right">80%</span>
+									</p>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+
+								<p>Blending academic rigor with practical know-how with a Master’s degree from George
+									Mason University and a Bachelor’s in Electronics and Communication Engineering, I've
+									delved deep into VLSI, Embedded Systems, and Control Systems.
+									My hands-on experience covers a spectrum from AI frameworks to Autonomous Vehicle
+									Teleoperation and spans cutting-edge IoT technologies. Proficient in Programing and
+									adept with EDA tools
+									I've engineered embedded systems.
+									I am driven by a passion for innovation and excellence, poised to make significant
+									contributions in a Full-time roles.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Role:</span> <span>Computer Engineer(Specialized in IoT
+											&amp; Network Security)</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>IoT, Embedded Systems, Computer
+											Networking, &amp; Network Security</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Masters of Science</span></li>
+									<li class="d-flex"><span>EDA Tools:</span> <span>Verilog HDL, Visual Studio,AutoCAD,
+											MODBUS, SPI&amp; Altium </span></li>
+									<li class="d-flex"><span>Networking Tools:</span> <span> Wireshark, Network
+											diagrams, &amp; Windows Server DNS/DHCP</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, Microsoft Office Suite
+											(Excel, Word, PowerPoint), Google Analytics &amp; SEO</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Kannada,
+											Marathi</span></li>
+								</ul>
+							</div>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="experience-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Experience</h1>
+					<h2 class="mb-4">Experience</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2020-2022</span>
+						<h2>Junior Network Engineer</h2>
+						<span class="position">Trans-net Network Solutions</span>
+						<ul>
+							<li>Resolved Troubleshooting by inspecting LAN Infrastructure. Used Protocol service,
+								resulting in greater Network performance.</li>
+							<li>Raised the throughput bar level by 87% and gained hands on experience of Wireshark by
+								configuration of various Network Devices</li>
+							</p>
+					</div>
+
+				</div>
+
+				<div class="">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2019-2020</span>
+						<h2>IoT Internt</h2>
+						<span class="position">Kiyaan Infotech</span>
+						<ul>
+							<li>Gained expertise in the capacity of domain Internet of Things, worked on Azure IoT,
+								InfluxDB, Telegraf and acquired data acquisition skills from edge, analytics, storage,
+								escalations and remote.</li>
+							<li>Fed InfluxDB with time series data using Telegraf and MQTT broker. </li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+	</section>
+
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are Embedded Systems projects based on IoT, Auomotive Electronics, MQTT, Networking, C++ &
+						ML .
+					</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank">Digital
+									Music Store Data Analysis using SQL</a></h3>
+							<p>Analyzed music store data using advanced SQL queires to identify gaps and increase the
+								business growth.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank">Digital
+									Music Store Data Analysis using SQL</a></h3>
+							<p>Analyzed music store data using advanced SQL queires to identify gaps and increase the
+								business growth.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank">Digital
+									Music Store Data Analysis using SQL</a></h3>
+							<p>Analyzed music store data using advanced SQL queires to identify gaps and increase the
+								business growth.</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row d-flex justify-content-center">
+				
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank">Digital
+									Music Store Data Analysis using SQL</a></h3>
+							<p>Analyzed music store data using advanced SQL queires to identify gaps and increase the
+								business growth.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank"
+							class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/rohit-balekundri/health-monitoring-system" target="_blank">Digital
+									Music Store Data Analysis using SQL</a></h3>
+							<p>Analyzed music store data using advanced SQL queires to identify gaps and increase the
+								business growth.</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			</div>
+
+	</section>
+
+	<section class="ftco-section ftco-no-pb pt-0" id="education-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Education</h1>
+					<h2 class="mb-4">Education</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-2024</span>
+						<h2>Master of Science</h2>
+						<span class="position">George Mason University</span><br>
+						<span><i>Fairfax, Virginia, United States</i></span>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2016-2020</span>
+						<h2>Bachelor of Engineering</h2>
+						<span class="position">Visvesvaraya Technological University</span><br>
+						<span><i>Belagavi, Karnataka, India</i></span>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-no-pb" id="publications-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Publications</h1>
+					<h2 class="mb-4">Publications</h2>
+				</div>
+			</div>
+
+			<div class="row">
+				<div>
+					<div class="resume-wrap ftco-animate">
+						<h2 class="publications-label"><a href="https://www.ijrte.org/portfolio-item/A3074059120/"
+								target="_blank">An Insight into Traffic Light Discernment and Cognizance using Support
+								Vector Machine, Multi Class Learning and Deep Learning Concepts</a></h2>
+						<span class="position">International Journal of Recent Technology and Engineering
+							(IJRTE)</span><br>
+						<span><i>ISSN: 2277-3878, Volume X, Issue-X, July 2019.</i></span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-6 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://0101010101">+ 1 (303) 668-9881</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-6 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="ion-ios-mail"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="mailto:info@yoursite.com">rohitbalekundri9.rb@gmail.com</a></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<br>
+					<br>
+					<div class="row justify-content-center">
+					</div>
+					<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						<li class="ftco-animate"><a href="https://www.linkedin.com/in/rohitbalekundri/"
+								target="_blank"><span class="icon-linkedin"></span></a></li>
+						<li class="ftco-animate"><a href="https://github.com/rohit-balekundri" target="_blank"><span
+									class="icon-github"></span></a></li>
+						<li class="ftco-animate"><a href=""><span class="icon-twitter"></span></a></li>
+						<li class="ftco-animate"><a href=""><span class="icon-facebook"></span></a></li>
+						<li class="ftco-animate"><a href=""><span class="icon-instagram"></span></a></li>
+					</ul>
+					<br>
+				</div>
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section py-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved.
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
