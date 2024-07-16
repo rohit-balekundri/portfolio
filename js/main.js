@@ -269,7 +269,21 @@
     fixedContentPos: false
   });
 
-
+  $(document).ready(function() {
+    var $skillsContent = $('.skills-content');
+    
+    if ($skillsContent.length) {
+        $skillsContent.waypoint(function(direction) {
+            var $progressBars = $('.progress .progress-bar');
+            $progressBars.each(function() {
+                var $this = $(this);
+                $this.css('width', $this.attr('aria-valuenow') + '%');
+            });
+        }, {
+            offset: '80%'
+        });
+    }
+});
 
 
 
